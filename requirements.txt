@@ -1,0 +1,20 @@
+# Primary runtime dependencies
+langchain
+langchain_community
+langchain_openai
+langgraph
+tiktoken
+openai
+python-dotenv
+fastapi
+uvicorn
+streamlit
+pandas
+requests
+pydantic
+pydot
+
+# Testing / dev
+pytest
+pytest-cov
+python-multipart
