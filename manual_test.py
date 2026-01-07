@@ -13,7 +13,7 @@ load_dotenv()
 
 def test_doc_ingestion_and_rag():
     try:
-        test_file='/Users/sachinbeast/Desktop/main/system/VMP_final/data/xx.pdf'
+        test_file=['/Users/sachinbeast/Desktop/main/system/VMP_final/data/final_data.csv']
         uploaded_file=[]
 
         for filepath in test_file:
@@ -23,7 +23,6 @@ def test_doc_ingestion_and_rag():
                 print('done')
             else:
                 print(f"File not found: {filepath}")
-        print('--------------')
         
         if not uploaded_file:
             print("No valid files found for ingestion")
