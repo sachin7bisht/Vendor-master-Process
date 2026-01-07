@@ -20,4 +20,5 @@ pytest
 pytest-cov
 python-multipart
 faiss-cpu
+pandas
 
