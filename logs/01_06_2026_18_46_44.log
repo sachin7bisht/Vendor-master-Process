@@ -1,0 +1,66 @@
+{"timestamp": "2026-01-06T13:16:56.342987Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:16:56.343552Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:16:56.343636Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:16:56.345342Z", "level": "info", "event": "YAML config loaded"}
+{"session_id": "session_20260106_184656_96319d0e", "temp_dir": "data/session_20260106_184656_96319d0e", "faiss_dir": "faiss_index/session_20260106_184656_96319d0e", "sessionized": true, "timestamp": "2026-01-06T13:16:56.345961Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "PYTHON_THE_NO_NONSENSE_GUIDE__1664690344.pdf", "saved_as": "data/session_20260106_184656_96319d0e/python_the_no_nonsense_guide__1664690344_d3e4fe.pdf", "timestamp": "2026-01-06T13:16:56.346781Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 115, "timestamp": "2026-01-06T13:16:57.339306Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 161, "chunk_size": 1000, "overlap": 200, "timestamp": "2026-01-06T13:16:57.340929Z", "level": "info", "event": "Documents split"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-06T13:16:57.341047Z", "level": "info", "event": "Loading embedding model"}
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+Loading faiss.
+Successfully loaded faiss.
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index/session_20260106_184656_96319d0e", "timestamp": "2026-01-06T13:17:02.286551Z", "level": "info", "event": "FAISS index updated"}
+{"k": 5, "fetch_k": 20, "lambda_mult": 0.5, "timestamp": "2026-01-06T13:17:02.286765Z", "level": "info", "event": "Using MMR search 11"}
+{"timestamp": "2026-01-06T13:17:15.445669Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:17:15.446359Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:17:15.446548Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:17:15.448795Z", "level": "info", "event": "YAML config loaded"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2026-01-06T13:17:15.449009Z", "level": "info", "event": "Loading LLM"}
+{"session_id": "session_20260106_184656_96319d0e", "timestamp": "2026-01-06T13:17:15.470451Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260106_184656_96319d0e", "timestamp": "2026-01-06T13:17:15.470640Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"timestamp": "2026-01-06T13:17:15.471280Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:17:15.471355Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:17:15.471398Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:17:15.472547Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-06T13:17:15.472605Z", "level": "info", "event": "Loading embedding model"}
+{"session_id": "session_20260106_184656_96319d0e", "timestamp": "2026-01-06T13:17:15.486646Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index/session_20260106_184656_96319d0e", "index_name": "index", "search_type": "mmr", "k": 5, "fetch_k": 20, "lambda_mult": 0.5, "session_id": "session_20260106_184656_96319d0e", "timestamp": "2026-01-06T13:17:15.486735Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260106_184656_96319d0e", "user_input": "what is this document about", "answer_preview": "The document provides information on various programming concepts and techniques. It includes details on deleting files using the `os.remove()` method", "timestamp": "2026-01-06T13:17:20.417841Z", "level": "info", "event": "Chain invoked successfully"}
+{"timestamp": "2026-01-06T13:24:11.036733Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:24:11.037644Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:24:11.037824Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:24:11.041187Z", "level": "info", "event": "YAML config loaded"}
+{"session_id": "session_20260106_185411_9f5391ae", "temp_dir": "data/session_20260106_185411_9f5391ae", "faiss_dir": "faiss_index/session_20260106_185411_9f5391ae", "sessionized": true, "timestamp": "2026-01-06T13:24:11.042017Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "final_data.csv", "saved_as": "data/session_20260106_185411_9f5391ae/final_data_b09cdc.csv", "timestamp": "2026-01-06T13:24:11.042916Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 1002, "timestamp": "2026-01-06T13:24:11.065579Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 2002, "chunk_size": 1000, "overlap": 200, "timestamp": "2026-01-06T13:24:11.086819Z", "level": "info", "event": "Documents split"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-06T13:24:11.087037Z", "level": "info", "event": "Loading embedding model"}
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index/session_20260106_185411_9f5391ae", "timestamp": "2026-01-06T13:24:27.127727Z", "level": "info", "event": "FAISS index updated"}
+{"k": 5, "fetch_k": 20, "lambda_mult": 0.5, "timestamp": "2026-01-06T13:24:27.127836Z", "level": "info", "event": "Using MMR search 11"}
+{"timestamp": "2026-01-06T13:24:44.509888Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:24:44.510815Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:24:44.511042Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:24:44.512966Z", "level": "info", "event": "YAML config loaded"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2026-01-06T13:24:44.513263Z", "level": "info", "event": "Loading LLM"}
+{"session_id": "session_20260106_185411_9f5391ae", "timestamp": "2026-01-06T13:24:44.514332Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260106_185411_9f5391ae", "timestamp": "2026-01-06T13:24:44.514503Z", "level": "info", "event": "ConversationalRAG initialized"}
+{"timestamp": "2026-01-06T13:24:44.515338Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:24:44.515418Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:24:44.515465Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:24:44.516640Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-06T13:24:44.516780Z", "level": "info", "event": "Loading embedding model"}
+{"session_id": "session_20260106_185411_9f5391ae", "timestamp": "2026-01-06T13:24:44.546713Z", "level": "info", "event": "LCEL graph built successfully"}
+{"index_path": "faiss_index/session_20260106_185411_9f5391ae", "index_name": "index", "search_type": "mmr", "k": 5, "fetch_k": 20, "lambda_mult": 0.5, "session_id": "session_20260106_185411_9f5391ae", "timestamp": "2026-01-06T13:24:44.546838Z", "level": "info", "event": "FAISS retriever loaded successfully"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260106_185411_9f5391ae", "user_input": "what is this documnet about", "answer_preview": "The document contains records of customer interactions regarding the status of inventory items, specifically Avionics Displays and Flight Control Comp", "timestamp": "2026-01-06T13:24:49.645008Z", "level": "info", "event": "Chain invoked successfully"}

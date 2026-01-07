@@ -1,0 +1,15 @@
+{"timestamp": "2026-01-06T13:14:08.008923Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-06T13:14:08.009608Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-06T13:14:08.009736Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-06T13:14:08.012036Z", "level": "info", "event": "YAML config loaded"}
+{"session_id": "session_20260106_184408_48b1b2b8", "temp_dir": "data/session_20260106_184408_48b1b2b8", "faiss_dir": "faiss_index/session_20260106_184408_48b1b2b8", "sessionized": true, "timestamp": "2026-01-06T13:14:08.013524Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "PYTHON_THE_NO_NONSENSE_GUIDE__1664690344.pdf", "saved_as": "data/session_20260106_184408_48b1b2b8/python_the_no_nonsense_guide__1664690344_d7ccbc.pdf", "timestamp": "2026-01-06T13:14:08.015096Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 115, "timestamp": "2026-01-06T13:14:08.988500Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 161, "chunk_size": 1000, "overlap": 200, "timestamp": "2026-01-06T13:14:08.990135Z", "level": "info", "event": "Documents split"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-06T13:14:08.990244Z", "level": "info", "event": "Loading embedding model"}
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+Loading faiss.
+Successfully loaded faiss.
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index/session_20260106_184408_48b1b2b8", "timestamp": "2026-01-06T13:14:12.960276Z", "level": "info", "event": "FAISS index updated"}
+{"k": 5, "fetch_k": 20, "lambda_mult": 0.5, "timestamp": "2026-01-06T13:14:12.960473Z", "level": "info", "event": "Using MMR search 11"}

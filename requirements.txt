@@ -13,8 +13,11 @@ pandas
 requests
 pydantic
 pydot
+structlog
 
 # Testing / dev
 pytest
 pytest-cov
 python-multipart
+
+faiss-cpu
