@@ -13,7 +13,9 @@ load_dotenv()
 
 def test_doc_ingestion_and_rag():
     try:
-        test_file=['/Users/sachinbeast/Desktop/main/system/VMP_final/data/final_data.csv']
+        # Use relative path compatible with any environment
+        base_dir = Path(__file__).resolve().parent
+        test_file = [str(base_dir / "data" / "final_data.csv")]
         uploaded_file=[]
 
         for filepath in test_file:
