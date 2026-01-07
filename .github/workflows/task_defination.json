@@ -1,0 +1,48 @@
+{
+    "family": "vmplivedef",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::165096162801:role/ecsTaskExecutionRole",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "8192",
+    "containerDefinitions": [
+        {
+            "name": "vmplive-container",
+            "image": "165096162801.dkr.ecr.us-east-1.amazonaws.com/vmplive",
+            "cpu": 1024,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "name": "vmplive-container-8080-tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "environment": [
+                {
+                    "name": "ENV",
+                    "value": "production"
+                }
+            ],
+            "secrets": [
+                {
+                    "name": "apikeyliveclass",
+                    "valueFrom": "arn:aws:secretsmanager:us-east-1:165096162801:secret:VMP-CVWcOs"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/vmplivedef",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs",
+                    "awslogs-create-group": "true"
+                }
+            }
+        }
+    ]
+}
