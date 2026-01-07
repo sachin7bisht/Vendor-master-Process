@@ -40,7 +40,7 @@ def test_chat_failure_returns_500(client, clear_sessions, monkeypatch):
         def __init__(self, session_id=None):
             pass
         def load_retriever_from_faiss(self, *a, **k):
-            from multi_doc_chat.exception.custom_exception import DocumentPortalException
+            from backend.exception.custom_exception import DocumentPortalException
             raise DocumentPortalException("fail load", None)
 
     monkeypatch.setattr(main, "ConversationalRAG", BoomRAG)

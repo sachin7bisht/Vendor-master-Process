@@ -1,8 +1,7 @@
-import pathlib
 import pytest
 
-from multi_doc_chat.src.document_chat.retrieval import ConversationalRAG
-from multi_doc_chat.exception.custom_exception import DocumentPortalException
+from backend.src.document_chat.retrieval import ConversationalRAG
+from backend.exception.custom_exception import DocumentPortalException
 
 
 def test_conversationalrag_error_handling(tmp_dirs, stub_model_loader):

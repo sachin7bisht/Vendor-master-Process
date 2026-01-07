@@ -18,14 +18,14 @@ def test_upload_no_files_validation_error(client, clear_sessions, stub_ingestor)
 
 
 def test_upload_ingestor_failure_returns_500(client, clear_sessions, monkeypatch, tmp_dirs):
-    import multi_doc_chat.src.document_ingestion.data_ingestion as di
+    import backend.src.document_ingestion.data_ingestion as di
     import main
 
     class Boom:
         def __init__(self, *a, **k):
             self.session_id = "sess_test"
         def built_retriver(self, *a, **k):
-            from multi_doc_chat.exception.custom_exception import DocumentPortalException
+            from backend.exception.custom_exception import DocumentPortalException
             raise DocumentPortalException("boom", None)
 
     monkeypatch.setattr(di, "ChatIngestor", Boom)

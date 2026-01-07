@@ -2,7 +2,7 @@ import pathlib
 import pytest
 from langchain_core.documents import Document
 
-from multi_doc_chat.src.document_ingestion.data_ingestion import (
+from backend.src.document_ingestion.data_ingestion import (
     generate_session_id,
     ChatIngestor,
     FaissManager,

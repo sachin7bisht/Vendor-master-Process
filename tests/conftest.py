@@ -105,8 +105,8 @@ def stub_model_loader(monkeypatch):
     monkeypatch.setattr(ml_mod2, "ModelLoader", FakeModelLoader)
 
     # Also patch the already-imported symbols used in modules under test
-    import multi_doc_chat.src.document_ingestion.data_ingestion as di
-    import multi_doc_chat.src.document_chat.retrieval as r
+    import backend.src.document_ingestion.data_ingestion as di
+    import backend.src.document_chat.retrieval as r
     monkeypatch.setattr(di, "ModelLoader", FakeModelLoader)
     monkeypatch.setattr(r, "ModelLoader", FakeModelLoader)
     yield FakeModelLoader
@@ -114,7 +114,7 @@ def stub_model_loader(monkeypatch):
 
 @pytest.fixture
 def stub_ingestor(monkeypatch):
-    import multi_doc_chat.src.document_ingestion.data_ingestion as di
+    import backend.src.document_ingestion.data_ingestion as di
 
     class FakeIngestor:
         def __init__(self, use_session_dirs=True, **kwargs):
@@ -131,7 +131,7 @@ def stub_ingestor(monkeypatch):
 
 @pytest.fixture
 def stub_rag(monkeypatch):
-    import multi_doc_chat.src.document_chat.retrieval as r
+    import backend.src.document_chat.retrieval as r
 
     class FakeRAG:
         def __init__(self, session_id=None, retriever=None):
