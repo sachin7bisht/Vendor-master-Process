@@ -19,5 +19,4 @@ structlog
 pytest
 pytest-cov
 python-multipart
-
 faiss-cpu
