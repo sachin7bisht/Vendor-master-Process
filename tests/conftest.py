@@ -7,7 +7,7 @@ import pathlib
 import sys
 import pytest
 
-os.environ.setdefault("PYTHONPATH", str(pathlib.Path(__file__).resolve().parents[1] / "multi_doc_chat"))
+os.environ.setdefault("PYTHONPATH", str(pathlib.Path(__file__).resolve().parents[1] / "backend"))
 os.environ.setdefault("OPENAI_API_KEY", "openai")
 os.environ.setdefault("OPENAI_API_KEY", "google")
 os.environ.setdefault("LLM_PROVIDER", "openai")
@@ -68,8 +68,8 @@ class _StubLLM:
 @pytest.fixture
 def stub_model_loader(monkeypatch):
     # Patch both module paths to cover imports via `utils.model_loader` and `multi_doc_chat.utils.model_loader`
-    import multi_doc_chat.utils.model_loader as ml_mod
-    from multi_doc_chat.utils import model_loader as ml_mod2
+    import backend.utils.model_loader as ml_mod
+    from backend.utils import model_loader as ml_mod2
 
     class FakeApiKeyMgr:
         def __init__(self):

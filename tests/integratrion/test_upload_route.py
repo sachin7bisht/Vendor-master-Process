@@ -1,5 +1,6 @@
 import io
 import pytest
+import sys
 
 
 def test_upload_success_returns_session_and_indexed(client, clear_sessions, stub_ingestor, tmp_dirs):
