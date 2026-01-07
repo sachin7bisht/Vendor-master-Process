@@ -1,0 +1,42 @@
+{"timestamp": "2026-01-07T08:00:15.765887Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-07T08:00:15.766101Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-07T08:00:15.766137Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-07T08:00:15.766740Z", "level": "info", "event": "YAML config loaded"}
+{"session_id": "session_20260107_133015_838b521d", "temp_dir": "data/session_20260107_133015_838b521d", "faiss_dir": "faiss_index/session_20260107_133015_838b521d", "sessionized": true, "timestamp": "2026-01-07T08:00:15.766928Z", "level": "info", "event": "ChatIngestor initialized"}
+{"uploaded": "/Users/sachinbeast/Desktop/main/system/VMP_final/data/final_data.csv", "saved_as": "data/session_20260107_133015_838b521d/final_data_730198.csv", "timestamp": "2026-01-07T08:00:15.767827Z", "level": "info", "event": "File saved for ingestion"}
+{"count": 1002, "timestamp": "2026-01-07T08:00:15.777335Z", "level": "info", "event": "Documents loaded"}
+{"chunks": 15979, "chunk_size": 100, "overlap": 20, "timestamp": "2026-01-07T08:00:15.822288Z", "level": "info", "event": "Documents split"}
+{"model": "text-embedding-3-small", "timestamp": "2026-01-07T08:00:15.822466Z", "level": "info", "event": "Loading embedding model"}
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+Loading faiss.
+Successfully loaded faiss.
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+{"added": 1, "index": "faiss_index/session_20260107_133015_838b521d", "timestamp": "2026-01-07T08:01:22.411495Z", "level": "info", "event": "FAISS index updated"}
+{"k": 5, "fetch_k": 20, "lambda_mult": 0.5, "timestamp": "2026-01-07T08:01:22.411594Z", "level": "info", "event": "Using MMR search 11"}
+{"timestamp": "2026-01-07T08:01:22.414802Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-01-07T08:01:22.414859Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-01-07T08:01:22.414881Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["embedding_model", "retriever", "llm"], "timestamp": "2026-01-07T08:01:22.415972Z", "level": "info", "event": "YAML config loaded"}
+{"provider": "openai", "model": "gpt-4o", "timestamp": "2026-01-07T08:01:22.416019Z", "level": "info", "event": "Loading LLM"}
+{"session_id": "session_20260107_133015_838b521d", "timestamp": "2026-01-07T08:01:22.426307Z", "level": "info", "event": "LLM loaded successfully"}
+{"session_id": "session_20260107_133015_838b521d", "timestamp": "2026-01-07T08:01:22.426450Z", "level": "info", "event": "LCEL graph built successfully"}
+{"session_id": "session_20260107_133015_838b521d", "timestamp": "2026-01-07T08:01:22.426475Z", "level": "info", "event": "ConversationalRAG initialized"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"session_id": "session_20260107_133015_838b521d", "user_input": "WHAT IS THIS DOCUM,ENT ABOUT]", "answer_preview": "The document contains summaries of requests for the status of various invoices related to different items, such as an Avionics Display and a Flight Co", "timestamp": "2026-01-07T08:04:25.245947Z", "level": "info", "event": "Chain invoked successfully"}
