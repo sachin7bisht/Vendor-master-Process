@@ -1,0 +1,42 @@
+FROM jenkins/jenkins:lts
+
+USER root
+
+# Install Python 3 and dependencies
+RUN apt-get update && \
+    apt-get install -y --fix-missing \
+    python3 \
+    python3-venv \
+    git \
+    curl \
+    ca-certificates \
+    lsb-release \
+    gnupg \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Azure CLI
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
+# Install Docker CLI (for building images in Jenkins)
+RUN install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    chmod a+r /etc/apt/keyrings/docker.gpg && \
+    echo \
+    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+    tee /etc/apt/sources.list.d/docker.list > /dev/null && \
+    apt-get update && \
+    apt-get install -y --fix-missing docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create symbolic link for python command
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Pre-install essential Jenkins plugins for this pipeline
+RUN jenkins-plugin-cli --plugins "git workflow-aggregator junit github-branch-source"
+
+# Configure git to allow all directories (fixes dubious ownership errors in Jenkins)
+RUN git config --system --add safe.directory '*'
+
+# Switch back to jenkins user
+USER jenkins
